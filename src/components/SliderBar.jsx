@@ -7,6 +7,7 @@ import {extendMoment} from 'moment-range';
 import * as FontAwesome from 'react-icons/lib/fa'
 import * as TiIconPack from 'react-icons/lib/ti'
 
+
 const momentRange = extendMoment(moment);
 
 class SliderBar extends Component {
