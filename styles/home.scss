@@ -6,176 +6,182 @@ $neo-orbit: 700;
 *,
 *:after,
 *:before {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 html {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 body {
-  pointer-events: none;
-  box-sizing: border-box;
-  background-color: #12414E;
-  font-family: 'Rubik', sans-serif;
-  box-shadow: inset 0 -764px 447px -227px rgba(15,96,88,0.1);
-  color: #d4d1d1;
-  background: url("../public/assets/images/star-tile.png");
+    pointer-events: none;
+    box-sizing: border-box;
+    background-color: #12414E;
+    font-family: 'Rubik', sans-serif;
+    box-shadow: inset 0 -764px 447px -227px rgba(15, 96, 88, 0.1);
+    color: #d4d1d1;
+    background: url("../public/assets/images/star-tile.png");
 }
 
 .earth-system {
-  height: $mars-orbit + px;
-  width: $mars-orbit + px;
-  transform-style: preserve-3d;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -290px;
-  transform: rotateX(57deg);
+    height: $mars-orbit + px;
+    width: $mars-orbit + px;
+    transform-style: preserve-3d;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -290px;
+    transform: rotateX(57deg);
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
 
-.orbit-highlight{
-  transition: .5s ease;
-  box-shadow: rgb(255, 255, 114) 0px 2px 0px 3px inset!important;
+.orbit-highlight {
+    transition: .5s ease;
+    box-shadow: rgb(255, 255, 114) 0px 2px 0px 3px inset!important;
 }
 
 .orbit {
-  position: absolute;
-  border-radius: 50%;
-  margin-top: -700px;
-  left: -200px;
-  width: 2800px;
-  height: 2800px;
-  border: solid 4px #FF454E;
-  box-shadow: inset 0 0 50px red, 0 0 0 1000px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    border-radius: 50%;
+    margin-top: -700px;
+    left: -200px;
+    width: 2800px;
+    height: 2800px;
+    border: solid 4px #FF454E;
+    box-shadow: inset 0 0 50px red, 0 0 0 1000px rgba(0, 0, 0, 0.5);
 }
 
 .moon-orbit {
-  border-radius: 50%;
-  position: absolute;
-  left: (($mars-orbit/2) - ($moon-orbit/2)) + px;
-  top: (($mars-orbit/2) - ($moon-orbit/2)) + px;
-  width: $moon-orbit + px;
-  height: $moon-orbit + px;
-  border: solid 4px #FFF;
+    border-radius: 50%;
+    position: relative;
+    left: (($mars-orbit/2) - ($moon-orbit/2)) + px;
+    top: (($mars-orbit/2) - ($moon-orbit/2)) + px;
+    width: $moon-orbit + px;
+    height: $moon-orbit + px;
+    border: solid 4px #FFF;
 }
 
 .moon {
-  pointer-events: auto;
-  position: absolute;
-  left: 118px;
-  top: 118px;
-  width: 44px;
-  height: 44px;
-  animation: rotate-moon 56.7s infinite linear;
-  cursor: pointer;
+    pointer-events: auto;
+    position: absolute;
+    left: 118px;
+    top: 118px;
+    width: 44px;
+    height: 44px;
+    animation: rotate-moon 56.7s infinite linear;
+    cursor: pointer;
 }
 
 .moon:hover {
-  animation-play-state: paused;
+    animation-play-state: paused;
 }
 
 .mars {
-  pointer-events: auto;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  left: 16px;
-  top: 1041px;
-  transform: rotateX(-57deg);
-  cursor: pointer;
-  transition: 0.5s;
+    pointer-events: auto;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 115px;
+    top: 761px;
+    transform: rotateX(-57deg);
+    cursor: pointer;
+    transition: 0.5s;
+    -moz-transform: rotateY(-57deg) scale(2);
 }
 
 .mars:hover {
-  transform: scale(1.3) rotateX(-54deg);
+    transform: scale(1.3) rotateX(-54deg);
+    -moz-transform: rotateY(-57deg) scale(2.3);
 }
 
 @keyframes rotate-moon {
-  0% {
-    transform: rotateZ(0deg) translateX(($moon-orbit / 2) + px) rotateZ(0deg) rotateX(-57deg);
-  }
+    0% {
+        transform: rotateZ(0deg) translateX(($moon-orbit / 2) + px) rotateZ(0deg) rotateX(-57deg);
+    }
 
-  100% {
-    transform: rotateZ(360deg) translateX(($moon-orbit / 2) + px) rotateZ(-360deg) rotateX(-57deg);
-  }
+    100% {
+        transform: rotateZ(360deg) translateX(($moon-orbit / 2) + px) rotateZ(-360deg) rotateX(-57deg);
+    }
 }
 
 .alertContainer {
-  pointer-events: auto;
-  position: fixed;
-  transform: rotateX(-57deg);
-  z-index: 900;
-  cursor: pointer;
-  left: 731px;
-  top: 751px;
+    pointer-events: auto;
+    position: fixed;
+    transform: rotateX(-57deg);
+    z-index: 900;
+    cursor: pointer;
+    left: 731px;
+    top: 751px;
 }
 
 .alert {
-  left: 50%;
-  top: 340px;
-  font-size: 90px;
-  color: #FFA200FF;
-  cursor: pointer;
+    left: 50%;
+    top: 340px;
+    font-size: 90px;
+    color: #FFA200FF;
+    cursor: pointer;
 }
 
 .alert:hover {
-  color: #FFD502FF;
+    color: #FFD502FF;
 }
 
 .logo {
-  top: 30px;
-  position: fixed;
-  left: 30px;
-  width: 320px;
+    top: 30px;
+    position: fixed;
+    left: 30px;
+    width: 320px;
 }
 
 .test-button {
-  pointer-events: all;
+    pointer-events: all;
 }
 
 #marspopup {
-  color: white;
-  position: absolute;
-  left: 43px;
-  top: 34%;
-  width: 200px;
-  margin-left: -100px;
-  transform: rotateX(-57deg);
-  text-align: center;
-  font-size: 30px;
-  font-family: 'Roboto Mono', monospace;
+    color: white;
+    position: absolute;
+    left: 141px;
+    top: 23%;
+    width: 200px;
+    margin-left: -100px;
+    transform: rotateX(-57deg);
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Roboto Mono', monospace;
+    -moz-transform: rotateY(-57deg) scale(2.5);
 }
 
 #mars.hidden {
-  opacity: 0;
-  transition: all 1s linear;
+    opacity: 0;
+    transition: all 1s linear;
 }
 
 #moonpopup {
-  color: white;
-  position: absolute;
-  left: 50%;
-  top: 50px;
-  width: 200px;
-  margin-left: -100px;
-  text-align: center;
-  font-size: 30px;
-  font-family: 'Roboto Mono', monospace;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    width: 200px;
+    margin-left: -100px;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Roboto Mono', monospace;
+    -moz-transform: rotateY(-72deg) scale(3.5) translateY(25px);
 }
 
 #moon.hidden {
-  opacity: 0;
-  transition: all 1s linear;
+    opacity: 0;
+    transition: all 1s linear;
 }
 
 .moonimage {
- transition: 0.5s;
+    transition: 0.5s;
+    -moz-transform: rotateY(-72deg) scale(3);
 }
 
 .moonimage:hover {
-  transform: scale(1.2) rotateX(-34deg);
+    transform: scale(1.2);
+    -moz-transform: rotateY(-72deg) scale(3.5);
 }
