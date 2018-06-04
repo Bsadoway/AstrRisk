@@ -6,6 +6,7 @@ Contributors
 
 AstrRisk
 =====================
+http://astrrisk.com/
 
 AstrRisk is a data visualization app that allows users to view Near Earth Objects (NEOs) that are between Mars and Earth on any given day.
 
@@ -15,8 +16,7 @@ Radar and danger charts provide easy to digest information about individual NEOs
 
 Future goals
 =======================
-- Deployment of the app
-
+- Simulate real orbit of NEOs
 
 Screenshots
 =======================
